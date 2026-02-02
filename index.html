@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moldura Foto - Adicione Molduras nas Suas Fotos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">🖼️ Moldura Foto</h1>
+                <p class="tagline">Transforme suas fotos com molduras incríveis</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <!-- Left Panel - Controls -->
+                <section class="controls-panel">
+                    <h2>Configurações</h2>
+                    
+                    <!-- Upload Section -->
+                    <div class="control-group">
+                        <label for="photo-upload" class="control-label">Escolha uma Foto</label>
+                        <div class="upload-area" id="uploadArea">
+                            <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                            <p>Clique ou arraste uma foto aqui</p>
+                        </div>
+                        <input type="file" id="photo-upload" accept="image/*" style="display: none;">
+                    </div>
+
+                    <!-- Photo Zoom -->
+                    <div class="control-group">
+                        <label for="zoom-slider" class="control-label">
+                            Zoom da Foto: <span id="zoomValue">60</span>%
+                        </label>
+                        <input type="range" id="zoom-slider" min="10" max="200" value="60" class="slider">
+                        <div class="slider-labels">
+                            <span>10%</span>
+                            <span>200%</span>
+                        </div>
+                    </div>
+
+                    <!-- Position Info -->
+                    <div class="control-group">
+                        <label class="control-label">💡 Dica: Arraste a foto na pré-visualização para posicionar</label>
+                        <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">Use o mouse para arrastar e posicionar a imagem diretamente na área de visualização.</p>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="control-group action-buttons">
+                        <button class="btn btn-secondary" id="resetBtn">🔄 Resetar</button>
+                        <button class="btn btn-primary" id="downloadBtn">⬇️ Download</button>
+                    </div>
+                </section>
+
+                <!-- Right Panel - Preview -->
+                <section class="preview-panel">
+                    <h2>Visualização</h2>
+                    <div class="preview-container" id="previewContainer">
+                        <div class="preview-placeholder">
+                            <p>Carregue uma foto para começar</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Moldura Foto. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
